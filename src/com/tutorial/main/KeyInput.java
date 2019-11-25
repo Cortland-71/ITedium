@@ -2,8 +2,9 @@ package com.tutorial.main;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public class KeyInput extends KeyAdapter {
+public class KeyInput implements KeyListener {
 
     private Handler handler;
 
@@ -11,14 +12,25 @@ public class KeyInput extends KeyAdapter {
         this.handler = handler;
     }
 
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
     public void keyPressed(KeyEvent e) {
         int key = e.getKeyCode();
         for (GameObject obj : handler.getObjects()) {
             if (obj.getId() == ID.Player) {
-                if (key == KeyEvent.VK_W) obj.setVelY(-3);
-                if (key == KeyEvent.VK_S) obj.setVelY(3);
-                if (key == KeyEvent.VK_D) obj.setVelX(3);
-                if (key == KeyEvent.VK_A) obj.setVelX(-3);
+//                if (key == KeyEvent.VK_UP) obj.setVelY(-1);
+//                if (key == KeyEvent.VK_DOWN) obj.setVelY(1);
+//                if (key == KeyEvent.VK_RIGHT) obj.setVelX(1);
+//                if (key == KeyEvent.VK_LEFT) obj.setVelX(-1);
+
+                if (key == KeyEvent.VK_W) obj.setVelY(-1);
+                if (key == KeyEvent.VK_S) obj.setVelY(1);
+                if (key == KeyEvent.VK_D) obj.setVelX(1);
+                if (key == KeyEvent.VK_A) obj.setVelX(-1);
+                System.out.println(key);
 
             }
         }
@@ -28,6 +40,11 @@ public class KeyInput extends KeyAdapter {
         int key = e.getKeyCode();
         for (GameObject obj : handler.getObjects()) {
             if (obj.getId() == ID.Player) {
+//                if (key == KeyEvent.VK_UP) obj.setVelY(0);
+//                if (key == KeyEvent.VK_DOWN) obj.setVelY(0);
+//                if (key == KeyEvent.VK_RIGHT) obj.setVelX(0);
+//                if (key == KeyEvent.VK_LEFT) obj.setVelX(0);
+
                 if (key == KeyEvent.VK_W) obj.setVelY(0);
                 if (key == KeyEvent.VK_S) obj.setVelY(0);
                 if (key == KeyEvent.VK_D) obj.setVelX(0);

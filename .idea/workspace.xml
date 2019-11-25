@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6be39ec2-0959-41aa-96c3-be8acf8a938b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/tutorial/main/KeyInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ITedium/com/tutorial/main/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ITedium/com/tutorial/main/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ITedium/com/tutorial/main/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ITedium/com/tutorial/main/Handler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ITedium/com/tutorial/main/ID.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ITedium/com/tutorial/main/ID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ITedium/com/tutorial/main/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ITedium/com/tutorial/main/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tutorial/main/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tutorial/main/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tutorial/main/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tutorial/main/Handler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tutorial/main/ID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tutorial/main/ID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tutorial/main/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tutorial/main/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tutorial/main/KeyInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tutorial/main/KeyInput.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +79,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
