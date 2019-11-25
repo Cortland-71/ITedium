@@ -17,7 +17,7 @@ public class Game extends Canvas implements Runnable{
 
     public Game() {
         handler = new Handler();
-        player = new Player(Game.WIDTH/2, Game.HEIGHT/2, ID.Player);
+        player = new Player(Game.WIDTH/2, Game.HEIGHT/2, ID.Player, handler);
 
         handler.addObject(player);
         hud = new HUD();
