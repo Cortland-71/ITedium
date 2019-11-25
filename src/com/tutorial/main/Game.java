@@ -3,6 +3,7 @@ package com.tutorial.main;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.nio.Buffer;
+import java.util.Random;
 
 public class Game extends Canvas implements Runnable{
 
@@ -10,12 +11,17 @@ public class Game extends Canvas implements Runnable{
     private Thread thread;
     private boolean running = false;
     private Handler handler;
+    private Random rand = new Random();
 
     public Game() {
         new Window(WIDTH, HEIGHT, "GAME", this);
-        start();
         handler = new Handler();
-        handler.addObject(new Player(100, 100, ID.Player));
+
+        for (int i=0; i<10; i++) {
+            //int random = rand.nextInt(5);
+            handler.addObject(new Player(0, 20*i, ID.Player, i+1));
+        }
+
     }
 
     public synchronized void start() {
@@ -88,6 +94,6 @@ public class Game extends Canvas implements Runnable{
     }
 
     public static void main(String[] args) {
-        new Game();
+        new Game().start();
     }
 }

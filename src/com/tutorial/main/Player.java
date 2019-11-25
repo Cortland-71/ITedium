@@ -4,19 +4,35 @@ import java.awt.*;
 
 public class Player extends GameObject {
 
-    public Player(int x, int y, ID id) {
+    public Player(int x, int y, ID id, int vel) {
         super(x, y, id);
-        setVelX(1);
+        setVelX(vel);
     }
 
+    int state = 0;
     @Override
     public void tick() {
-        x += getVelX();
+
+        System.out.println("X: " + x);
+        if (state == 0) {
+            x += getVelX();
+            if (x > Game.WIDTH-10) {
+                state = 1;
+            }
+        }
+
+        if (state == 1) {
+            x += -getVelX();
+            if (x < 0) {
+                state = 0;
+            }
+        }
+
     }
 
     @Override
     public void render(Graphics g) {
         g.setColor(Color.WHITE);
-        g.fillRect(x, y, 30, 30);
+        g.fillRect(x, y, 10, 10);
     }
 }
