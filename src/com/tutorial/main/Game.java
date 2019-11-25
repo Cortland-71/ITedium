@@ -13,6 +13,7 @@ public class Game extends Canvas implements Runnable{
 
     public Game() {
         new Window(WIDTH, HEIGHT, "GAME", this);
+        start();
         handler = new Handler();
         handler.addObject(new Player(100, 100, ID.Player));
     }
@@ -34,8 +35,9 @@ public class Game extends Canvas implements Runnable{
 
     @Override
     public void run() {
+        this.requestFocus();
         long lastTime = System.nanoTime();
-        double amountOfTicks = 60;
+        double amountOfTicks = 60.0;
         double ns = 1_000_000_000 / amountOfTicks;
         double delta = 0;
         long timer = System.currentTimeMillis();
@@ -81,6 +83,6 @@ public class Game extends Canvas implements Runnable{
     }
 
     public static void main(String[] args) {
-        new Game().start();
+        new Game();
     }
 }
