@@ -14,24 +14,17 @@ public class KeyInput implements KeyListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
-
     }
 
     public void keyPressed(KeyEvent e) {
         int key = e.getKeyCode();
         for (GameObject obj : handler.getObjects()) {
             if (obj.getId() == ID.Player) {
-//                if (key == KeyEvent.VK_UP) obj.setVelY(-1);
-//                if (key == KeyEvent.VK_DOWN) obj.setVelY(1);
-//                if (key == KeyEvent.VK_RIGHT) obj.setVelX(1);
-//                if (key == KeyEvent.VK_LEFT) obj.setVelX(-1);
-
-                if (key == KeyEvent.VK_W) obj.setVelY(-1);
-                if (key == KeyEvent.VK_S) obj.setVelY(1);
-                if (key == KeyEvent.VK_D) obj.setVelX(1);
-                if (key == KeyEvent.VK_A) obj.setVelX(-1);
-                System.out.println(key);
-
+                if (key == KeyEvent.VK_UP) obj.setVelY(-1);
+                if (key == KeyEvent.VK_DOWN) obj.setVelY(1);
+                if (key == KeyEvent.VK_RIGHT) obj.setVelX(1);
+                if (key == KeyEvent.VK_LEFT) obj.setVelX(-1);
+                System.out.println(e.getKeyChar());
             }
         }
     }
@@ -40,16 +33,10 @@ public class KeyInput implements KeyListener {
         int key = e.getKeyCode();
         for (GameObject obj : handler.getObjects()) {
             if (obj.getId() == ID.Player) {
-//                if (key == KeyEvent.VK_UP) obj.setVelY(0);
-//                if (key == KeyEvent.VK_DOWN) obj.setVelY(0);
-//                if (key == KeyEvent.VK_RIGHT) obj.setVelX(0);
-//                if (key == KeyEvent.VK_LEFT) obj.setVelX(0);
-
-                if (key == KeyEvent.VK_W) obj.setVelY(0);
-                if (key == KeyEvent.VK_S) obj.setVelY(0);
-                if (key == KeyEvent.VK_D) obj.setVelX(0);
-                if (key == KeyEvent.VK_A) obj.setVelX(0);
-
+                if (key == KeyEvent.VK_UP) obj.setVelY(0);
+                if (key == KeyEvent.VK_DOWN) obj.setVelY(0);
+                if (key == KeyEvent.VK_RIGHT) obj.setVelX(0);
+                if (key == KeyEvent.VK_LEFT) obj.setVelX(0);
             }
         }
     }
