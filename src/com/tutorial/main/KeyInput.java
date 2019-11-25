@@ -26,6 +26,7 @@ public class KeyInput implements KeyListener {
                 if (key == KeyEvent.VK_LEFT) obj.setVelX(-3);
             }
         }
+        if (key == KeyEvent.VK_ESCAPE) System.exit(0);
     }
 
     public void keyReleased(KeyEvent e) {

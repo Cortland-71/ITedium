@@ -13,17 +13,21 @@ public class Game extends Canvas implements Runnable{
     private Handler handler;
     private Player player;
     private Random rand = new Random();
+    private HUD hud;
 
     public Game() {
         handler = new Handler();
         player = new Player(Game.WIDTH/2, Game.HEIGHT/2, ID.Player);
 
         handler.addObject(player);
+        hud = new HUD();
 
-        for (int i=0; i<20; i++) {
-            handler.addObject(new BasicEnemy(rand.nextInt(Game.WIDTH-30),
-                    rand.nextInt(Game.HEIGHT-30), ID.Enemy, rand.nextInt(5 -1)+1));
-        }
+        handler.addObject(new BasicEnemy(rand.nextInt(Game.WIDTH-30),
+                rand.nextInt(Game.HEIGHT-30), ID.Enemy, rand.nextInt(5 -1)+1));
+//        for (int i=0; i<20; i++) {
+//            handler.addObject(new BasicEnemy(rand.nextInt(Game.WIDTH-30),
+//                    rand.nextInt(Game.HEIGHT-30), ID.Enemy, rand.nextInt(5 -1)+1));
+//        }
         this.addKeyListener(new KeyInput(handler));
 
         new Window(WIDTH, HEIGHT, "BULLET HELL", this);
@@ -81,7 +85,9 @@ public class Game extends Canvas implements Runnable{
 
     private void tick() {
         handler.tick();
+        hud.tick();
     }
+
     private void render() {
         BufferStrategy bs = this.getBufferStrategy();
         if (bs == null) {
@@ -93,9 +99,15 @@ public class Game extends Canvas implements Runnable{
         g.setColor(Color.BLACK);
         g.fillRect(0,0, WIDTH, HEIGHT);
         handler.render(g);
-
+        hud.render(g);
         g.dispose();
         bs.show();
+    }
+
+    public static int clamp(int var, int min, int max) {
+        if (var >= max) return var = max;
+        else if (var <= min) return var = min;
+        return var;
     }
 
     public static void main(String[] args) {

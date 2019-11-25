@@ -13,8 +13,8 @@ public class BasicEnemy extends GameObject {
     public void tick() {
         x += getVelX();
         y += getVelY();
-        if (y <= 0 || y >= Game.HEIGHT-30) setVelY(getVelY() * -1);
-        if (x <= 0 || x >= Game.WIDTH-30) setVelX(getVelX() * -1);
+        if (y <= 0 || y >= Game.HEIGHT-38) setVelY(getVelY() * -1);
+        if (x <= 0 || x >= Game.WIDTH-16) setVelX(getVelX() * -1);
 
     }
 
