@@ -1,32 +1,32 @@
 package com.tutorial.main;
 
 import java.awt.*;
+import java.util.Random;
 
 public class Player extends GameObject {
+    private Random rand = new Random();
+    private int direction = 0;
+    private int vel = 0;
 
     public Player(int x, int y, ID id, int vel) {
         super(x, y, id);
+        this.vel = vel;
+
         setVelX(vel);
+        setVelY(vel);
     }
 
-    int state = 0;
     @Override
     public void tick() {
-
-        System.out.println("X: " + x);
-        if (state == 0) {
+        if (direction == 0) {
             x += getVelX();
-            if (x > Game.WIDTH-10) {
-                state = 1;
+            y += getVelY();
+            if (y > Game.HEIGHT - 30 || x > Game.WIDTH - 10) {
+                direction = 1;
             }
         }
 
-        if (state == 1) {
-            x += -getVelX();
-            if (x < 0) {
-                state = 0;
-            }
-        }
+
 
     }
 

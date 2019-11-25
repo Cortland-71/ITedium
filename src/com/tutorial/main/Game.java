@@ -14,13 +14,10 @@ public class Game extends Canvas implements Runnable{
     private Random rand = new Random();
 
     public Game() {
-        new Window(WIDTH, HEIGHT, "GAME", this);
         handler = new Handler();
+        new Window(WIDTH, HEIGHT, "GAME", this);
+        handler.addObject(new Player(0, 20, ID.Player, 1));
 
-        for (int i=0; i<10; i++) {
-            //int random = rand.nextInt(5);
-            handler.addObject(new Player(0, 20*i, ID.Player, i+1));
-        }
 
     }
 
