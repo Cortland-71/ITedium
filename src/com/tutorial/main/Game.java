@@ -14,6 +14,7 @@ public class Game extends Canvas implements Runnable{
     public Game() {
         new Window(WIDTH, HEIGHT, "GAME", this);
         handler = new Handler();
+        handler.addObject(new Player(100, 100, ID.Player));
     }
 
     public synchronized void start() {
@@ -71,9 +72,10 @@ public class Game extends Canvas implements Runnable{
         }
         Graphics g = bs.getDrawGraphics();
 
-        g.setColor(Color.GREEN);
+        g.setColor(Color.BLACK);
         g.fillRect(0,0, WIDTH, HEIGHT);
         handler.render(g);
+
         g.dispose();
         bs.show();
     }
