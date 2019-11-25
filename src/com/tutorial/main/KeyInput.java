@@ -20,10 +20,10 @@ public class KeyInput implements KeyListener {
         int key = e.getKeyCode();
         for (GameObject obj : handler.getObjects()) {
             if (obj.getId() == ID.Player) {
-                if (key == KeyEvent.VK_UP) obj.setVelY(-1);
-                if (key == KeyEvent.VK_DOWN) obj.setVelY(1);
-                if (key == KeyEvent.VK_RIGHT) obj.setVelX(1);
-                if (key == KeyEvent.VK_LEFT) obj.setVelX(-1);
+                if (key == KeyEvent.VK_UP) obj.setVelY(-3);
+                if (key == KeyEvent.VK_DOWN) obj.setVelY(3);
+                if (key == KeyEvent.VK_RIGHT) obj.setVelX(3);
+                if (key == KeyEvent.VK_LEFT) obj.setVelX(-3);
                 System.out.println(e.getKeyChar());
             }
         }
