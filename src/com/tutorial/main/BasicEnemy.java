@@ -3,10 +3,10 @@ package com.tutorial.main;
 import java.awt.*;
 
 public class BasicEnemy extends GameObject {
-    public BasicEnemy(int x, int y, ID id) {
+    public BasicEnemy(int x, int y, ID id, int vel) {
         super(x, y, id);
-        //setVelX(1);
-        setVelY(3);
+        setVelX(vel);
+        setVelY(vel);
     }
 
     @Override
@@ -14,6 +14,7 @@ public class BasicEnemy extends GameObject {
         x += getVelX();
         y += getVelY();
         if (y <= 0 || y >= Game.HEIGHT-30) setVelY(getVelY() * -1);
+        if (x <= 0 || x >= Game.WIDTH-30) setVelX(getVelX() * -1);
 
     }
 

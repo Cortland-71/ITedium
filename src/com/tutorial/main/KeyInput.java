@@ -24,7 +24,6 @@ public class KeyInput implements KeyListener {
                 if (key == KeyEvent.VK_DOWN) obj.setVelY(3);
                 if (key == KeyEvent.VK_RIGHT) obj.setVelX(3);
                 if (key == KeyEvent.VK_LEFT) obj.setVelX(-3);
-                System.out.println(e.getKeyChar());
             }
         }
     }

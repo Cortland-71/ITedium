@@ -19,10 +19,14 @@ public class Game extends Canvas implements Runnable{
         player = new Player(Game.WIDTH/2, Game.HEIGHT/2, ID.Player);
 
         handler.addObject(player);
-        handler.addObject(new BasicEnemy(Game.WIDTH/2, Game.HEIGHT/2, ID.Enemy));
+
+        for (int i=0; i<20; i++) {
+            handler.addObject(new BasicEnemy(rand.nextInt(Game.WIDTH-30),
+                    rand.nextInt(Game.HEIGHT-30), ID.Enemy, rand.nextInt(5 -1)+1));
+        }
         this.addKeyListener(new KeyInput(handler));
 
-        new Window(WIDTH, HEIGHT, "GAME", this);
+        new Window(WIDTH, HEIGHT, "BULLET HELL", this);
 
     }
 

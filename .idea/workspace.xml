@@ -6,8 +6,8 @@
       <change beforePath="$PROJECT_DIR$/out/production/ITedium/com/tutorial/main/BasicEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ITedium/com/tutorial/main/BasicEnemy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ITedium/com/tutorial/main/KeyInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ITedium/com/tutorial/main/KeyInput.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tutorial/main/BasicEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tutorial/main/BasicEnemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tutorial/main/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tutorial/main/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tutorial/main/KeyInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tutorial/main/KeyInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tutorial/main/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tutorial/main/Player.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
